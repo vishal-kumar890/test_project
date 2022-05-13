@@ -2,12 +2,12 @@
 
 
 function get_answer(operator){
-    console.log('operator',operator)
     let first_num = document.getElementById('first_num').value
     let second_num = document.getElementById('second_num').value
 
     if (first_num.trim() ==  "" || second_num.trim() == ""){
         alert('Please ensure that you enter value in both fields')
+        return
     }
 
     postData(`/${operator}`,{first_num:first_num,second_num:second_num}).then(data=>{
