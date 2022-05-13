@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Project</title>
+    <link rel="stylesheet" href="{{url_for('page_assets', path='/bootstrap.min.css')}}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h4>Sum of two numbers</h4>
+        <div class="my-2"> 
+            <label class="form-label" for="first_num">First Number</label>
+            <input id="first_num" type="text" class="form-control w-50">
+        </div>
+        <div class="mb-2"> 
+            <label class="form-label" for="second_num">Second Number</label>
+            <input id="second_num" type="text" class="form-control w-50">
+        </div>
+
+        <div>
+            <button id="addition" class="btn btn-primary d-inline">Add</button>
+            <button id="multiplication" class="btn btn-primary d-inline">Multiply</button>
+            <button id="subtraction" class="btn btn-primary d-inline">Subtract</button>
+        </div>
+
+        <div id="output_div" class="mt-5" style="display:none;">
+            <h5>Output is: </h5>
+            <p id="output_text"></p>
+        </div>
+    </div>
+    <script type="module" src="{{url_for('page_assets', path='/bootstrap.bundle.min.js')}}"></script>
+    <script type="module" src="{{url_for('page_assets', path='/script.js')}}"></script>
+</body>
+</html>
